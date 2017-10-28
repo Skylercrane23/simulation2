@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "chalk": "^2.3.0",
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "massive": "^4.4.0",
