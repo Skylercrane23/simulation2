@@ -1,24 +1,17 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const massive = require('massive');
-const cors = require('cors');
-require('dotenv').config();
-const controller = require('./controller');
+const chalk = require('chalk');
 
-var server = express();
+const addMiddlewareTo = require('./middleware/decorate.middleware');
+const delegateRoutesFor = require('./routers/delegate.router');
 
-// Connect to database using massive.
-massive('databaseplaceholder').then( dbInstance => {
-    server.set('db' , dbInstance );
-});
+const app = express();
 
-server.use(bodyParser.json());
-server.use( cors());
+// REQUEST ENTRY POINT
 
+addMiddlewareTo(app);
 
-// Sever port
-const port = 3000;
+delegateRoutesFor(app);
 
-server.listen(port, () => {
-    console.log(`Chris's server is listening on ${port}.`);
+app.listen(3000, () => {
+    console.log(`${ chalk.green('App running and listening at') } ${ chalk.cyan('localhost:3000') }`);
 });
