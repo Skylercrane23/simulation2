@@ -5,13 +5,17 @@
   "dependencies": {
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
+    "font-awesome": "^4.7.0",
     "massive": "^4.4.0",
+    "materialize-css": "^0.100.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-fontawesome": "^1.6.1",
     "react-scripts": "1.0.14"
   },
   "scripts": {
     "start": "react-scripts start",
+    "sass": "sass --watch src/scss:src/css",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

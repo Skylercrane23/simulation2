@@ -1,0 +1,32 @@
+.Nav {
+  background-color: #37474f;
+  color: white;
+  height: 70px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font-dosis;
+  font-size: 18px;
+  @media(max-width: 767px){
+    padding: 0 25px;
+  }
+  .logo {
+    span {
+      font-family: $font-dosis;
+      font-size: 32px;
+      margin-left: 10px;
+    }
+    &:hover {
+      color: $light-blue;
+    }
+  }
+  .logout {
+    i {
+      margin-left: 10px;
+    }
+    &:hover {
+      color: $light-blue;
+    }
+  }
+}

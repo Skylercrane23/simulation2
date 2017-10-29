@@ -4,9 +4,12 @@ module.exports = {
   login: ( req, res, next ) => {
     const dbInstance = req.app.get('db');
 
-    dbInstance.login([id, username, password])
+    dbInstance.login([username, password])
       
-      .then(user => { res.status(200).send(user); })
+      .then(user => { 
+        // login logic
+        res.status(200).send(user); 
+      })
       .catch( err => {
         console.log(err);
         res.status(500).send(err);
