@@ -1,0 +1,61 @@
+.Auth {
+  background-image: url('../img/loginbackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 70px);
+  background-color: white;
+  color: black;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    height: calc(100vh - 200px);
+    .card {
+      margin-top: 0px;
+      width: 400px;
+      height: auto;
+      padding: 50px;
+      font-family: $font-dosis;
+      margin-bottom: 0;
+      @media(max-width: 767px){
+        padding: 25px;
+      }
+      form {
+        h2 {
+          font-size: 32px;
+          margin-bottom: 40px;
+          color: $blue-grey;
+        }
+        .input-field {
+          padding: 0;
+          i {
+            color: $blue-grey;
+          }
+          i.active {
+            color: $light-blue;
+          }
+          label {
+            left: 0;
+          }
+          label.active {
+            color: $light-blue;
+          }
+          input {
+            &:focus {
+              border-bottom: 1px solid $light-blue;
+              -webkit-box-shadow: 0 1px 0 0 $light-blue;
+              box-shadow: 0 1px 0 0 $light-blue;
+            }
+          }
+        }
+        button {
+          margin-top: 20px;
+          background-color: $light-blue;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
