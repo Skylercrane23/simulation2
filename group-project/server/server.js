@@ -15,7 +15,6 @@ massive('databaseplaceholder').then( dbInstance => {
 server.use(bodyParser.json());
 server.use( cors());
 
-
 // Sever port
 const port = 3000;
 
