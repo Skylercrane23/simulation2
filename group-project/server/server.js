@@ -15,9 +15,20 @@ massive('databaseplaceholder').then( dbInstance => {
 server.use(bodyParser.json());
 server.use( cors());
 
-// Sever port
-const port = 3000;
+// AUTH REQUESTS
+app.post('/api/auth/login', authController.login);
+app.post('/api/auth/register', authController.register);
+app.post('/api/auth/logout', authController.logout);
 
-server.listen(port, () => {
+//HOUSING LISTS REQUESTS
+app.post('/api/properties', apiController.createListing);
+app.get('/api/properties', apiController.getListings);
+app.delete('/api/properties/:id', apiController.deleteListing);
+app.delete('/api/properties/filter', apiController.filterListing);
+
+// SERVER PORT
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
     console.log(`Chris's server is listening on ${port}.`);
 });
