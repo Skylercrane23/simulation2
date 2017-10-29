@@ -3,17 +3,21 @@ const bodyParser = require('body-parser');
 const massive = require('massive');
 const cors = require('cors');
 require('dotenv').config();
-const controller = require('./controller');
 
-var server = express();
 
+// CONTROLLERS
+const apiController = require('./controllers/api.router.js');
+const authController = require('./controllers/auth.router.js');
+
+
+var app = express();
 // Connect to database using massive.
-massive('databaseplaceholder').then( dbInstance => {
-    server.set('db' , dbInstance );
+massive('process.env.CONNECTION_STRING').then( dbInstance => {
+    app.set('db' , dbInstance );
 });
 
-server.use(bodyParser.json());
-server.use( cors());
+app.use(bodyParser.json() );
+app.use( cors() );
 
 // AUTH REQUESTS
 app.post('/api/auth/login', authController.login);
