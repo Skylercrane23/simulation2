@@ -4,11 +4,9 @@ const massive = require('massive');
 const cors = require('cors');
 require('dotenv').config();
 
-
 // CONTROLLERS
 const apiController = require('./controllers/api.router.js');
 const authController = require('./controllers/auth.router.js');
-
 
 var app = express();
 // Connect to database using massive.
@@ -26,7 +24,8 @@ app.post('/api/auth/logout', authController.logout);
 
 //HOUSING LISTS REQUESTS
 app.post('/api/properties', apiController.createListing);
-app.get('/api/properties', apiController.getListings);
+app.get('/api/properties/:id', apiController.getListings);
+app.get('/api/properties', apiController.getAllListings);
 app.delete('/api/properties/:id', apiController.deleteListing);
 app.delete('/api/properties/filter', apiController.filterListing);
 
