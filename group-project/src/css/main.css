@@ -484,6 +484,8 @@ template {
         margin-top: 20px;
         background-color: #29b6f6;
         width: 100%; }
+      .Auth .container .card form button.register {
+        background-color: #99aeb8; }
 
 .Nav {
   background-color: #37474f;

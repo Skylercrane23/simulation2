@@ -21,7 +21,9 @@ class Auth extends Component {
                 <label htmlFor="password">Password</label>
               </div>
 
-              <button className="btn waves-effect waves-light" type="submit" name="action">Login
+              <button className="login btn waves-effect waves-light" type="submit" name="action">Login
+              </button>
+              <button className="register btn waves-effect waves-light" type="submit" name="action">Register
               </button>
 
             </form>
