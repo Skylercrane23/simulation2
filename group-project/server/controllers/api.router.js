@@ -3,9 +3,9 @@ module.exports = {
   // CREATE LISTING METHOD
   createListing: (req, res, next) => {
     const dbInstance = req.app.get('db');
-    const { name, description, imageUrl, loan, mortgage, recommendedRent, rent, address, city } = req.body;
+    const { prop_name, prop_desc, address, city, state, zip, img_url, loan_tot, mortgage, desired_rent, user_id } = req.body;
 
-    dbInstance.create_listing([name, description, imageUrl, loan, mortgage, recommendedRent, rent, address, city])
+    dbInstance.create_listing([prop_name, prop_desc, address, city, state, zip, img_url, loan_tot, mortgage, desired_rent, user_id])
       .then(() => res.status(200).send())
       .catch(() => res.status(500).send());
   },
@@ -42,7 +42,11 @@ module.exports = {
   // FILTER LISTING METHOD
   filterListing: (req, res, next) => {
     const dbInstance = req.app.get('db');
+    
+    
     // FILTER CODE HERE???
+
+
     dbInstance.filter_listing([params.id])
       .then(() => res.status(200).send())
       .catch(() => res.status(500).send());
