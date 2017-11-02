@@ -27,7 +27,7 @@ app.post('/api/properties', apiController.createListing);
 app.get('/api/properties/:id', apiController.getListings);
 app.get('/api/properties', apiController.getAllListings);
 app.delete('/api/properties/:id', apiController.deleteListing);
-app.get('/api/properties/filter', apiController.filterListing);
+app.get('/api/properties/filter/:id', apiController.filterListing);
 
 // SERVER PORT
 const port = process.env.PORT || 3000;
