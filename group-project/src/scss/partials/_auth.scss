@@ -55,6 +55,9 @@
           background-color: $light-blue;
           width: 100%;
         }
+        button.register {
+          background-color: lighten($blue-grey, 20%);
+        }
       }
     }
   }
