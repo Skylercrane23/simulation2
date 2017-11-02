@@ -42,10 +42,6 @@ module.exports = {
   // FILTER LISTING METHOD
   filterListing: (req, res, next) => {
     const dbInstance = req.app.get('db');
-    
-    
-    // FILTER CODE HERE???
-
 
     dbInstance.filter_listing([params.id])
       .then(() => res.status(200).send())
