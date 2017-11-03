@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 
+// LINKING ROUTES
+import { Link } from 'react-router-dom';
+
+import Nav from './Nav';
+
 class Auth extends Component {
   render() {
     return (
-      <div className="Auth">
+      <div>
+        <Nav/>
+        <div className="Auth">
         <div className="container">
           <div className="card small">
             <form>
@@ -21,15 +28,19 @@ class Auth extends Component {
                 <label htmlFor="password">Password</label>
               </div>
 
-              <button className="login btn waves-effect waves-light" type="submit" name="action">Login
-              </button>
-              <button className="register btn waves-effect waves-light" type="submit" name="action">Register
-              </button>
+              <Link to="/dashboard">
+                <button className="login btn waves-effect waves-light" type="submit" name="action">Login</button>
+              </Link>
+              <Link to="/dashboard">
+                <button className="register btn waves-effect waves-light" type="submit" name="action">Register</button>
+              </Link>
 
             </form>
           </div>
         </div>
       </div>
+      </div>
+      
     );
   }
 }

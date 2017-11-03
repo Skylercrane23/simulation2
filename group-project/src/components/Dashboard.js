@@ -11,10 +11,19 @@ class Dashboard extends Component {
     return (
       <div className="Dashboard">
         <Nav />
-        Dashboard Component
-        <AddProperty />
-        <Filter />
-        <Listings />
+        <div className="container z-depth-5">
+          <div className="row dashboard-heading">
+            <div className="col s6 align-left">
+              <h1> Dashboard </h1>
+            </div>
+            <div className="col s6 right-align">
+              <AddProperty/>
+            </div>
+          </div>
+          <Filter />
+          {/* <Listings /> */}
+
+        </div>
       </div>
     );
   }

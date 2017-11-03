@@ -11,6 +11,12 @@
 // VARIABLES
 @import 'variables';
 
+// VARIABLES
+@import './partials/generic';
+
 // PARTIALS
 @import './partials/auth';
 @import './partials/nav';
+@import './partials/dashboard';
+@import './partials/_addProperty';
+@import './partials/filter';
