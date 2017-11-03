@@ -4,15 +4,14 @@ const massive = require('massive');
 const cors = require('cors');
 require('dotenv').config();
 
-
 // CONTROLLERS
 const apiController = require('./controllers/api.router.js');
 const authController = require('./controllers/auth.router.js');
 
-
 var app = express();
 // Connect to database using massive.
-massive('process.env.CONNECTION_STRING').then( dbInstance => {
+
+massive(process.env.CONNECTION_STRING).then( dbInstance => {
     app.set('db' , dbInstance );
 });
 
@@ -26,9 +25,10 @@ app.post('/api/auth/logout', authController.logout);
 
 //HOUSING LISTS REQUESTS
 app.post('/api/properties', apiController.createListing);
-app.get('/api/properties', apiController.getListings);
+app.get('/api/properties/:id', apiController.getListing);
+app.get('/api/properties', apiController.getAllListings);
 app.delete('/api/properties/:id', apiController.deleteListing);
-app.delete('/api/properties/filter', apiController.filterListing);
+app.get('/api/properties/filter/:id', apiController.filterListing);
 
 // SERVER PORT
 const port = process.env.PORT || 3000;

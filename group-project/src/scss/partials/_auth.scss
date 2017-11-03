@@ -2,7 +2,7 @@
   background-image: url('../img/loginbackground.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: calc(100vh - 70px);
+  min-height: 100vh;
   background-color: white;
   color: black;
   .container {
@@ -13,7 +13,7 @@
     align-self: center;
     height: calc(100vh - 200px);
     .card {
-      margin-top: 0px;
+      margin-top: 150px;
       width: 400px;
       height: auto;
       padding: 50px;
@@ -54,6 +54,15 @@
           margin-top: 20px;
           background-color: $light-blue;
           width: 100%;
+          &:hover {
+            background-color: lighten($light-blue, 10%);
+          }
+        }
+        button.register {
+          background-color: lighten($blue-grey, 20%);
+          &:hover {
+            background-color: lighten($blue-grey, 30%);
+          }
         }
       }
     }

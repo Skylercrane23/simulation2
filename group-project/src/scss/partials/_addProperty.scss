@@ -1,0 +1,10 @@
+.AddProperty {
+  button {
+    margin-top: 0px;
+    background-color: $light-blue;
+    //width: 100%;
+    &:hover {
+      background-color: lighten($light-blue, 10%);
+    }
+  }
+}
