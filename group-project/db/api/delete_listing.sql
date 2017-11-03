@@ -1,1 +1,0 @@
-DELETE FROM property WHERE propertyId = $1;
