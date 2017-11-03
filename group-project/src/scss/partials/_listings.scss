@@ -1,0 +1,12 @@
+.Listings {
+  h2 {
+    margin-bottom: 20px !important;
+  }
+  .Property {
+    &:nth-child(odd){
+      .card {
+        background-color: darken($blue-grey, 15%);
+      }
+    }
+  }
+}
