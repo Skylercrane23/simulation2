@@ -5,7 +5,7 @@
   .Property {
     &:nth-child(odd){
       .card {
-        background-color: darken($blue-grey, 15%);
+        background-color: darken($blue-grey, 10%);
       }
     }
   }

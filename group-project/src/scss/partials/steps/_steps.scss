@@ -1,0 +1,109 @@
+.steps {
+  background-image: url('../img/step1.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+  .container {
+    background-color: rgba(255, 255, 255, 1);
+    height: 100%;
+    margin-top: 0px;
+    padding: 25px;
+    //min-height: 500px;
+    overflow: auto;
+    padding-top: 100px;
+    .step-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $blue-grey;
+      padding-bottom: 20px;
+      .top-step {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        .step-num {
+
+        }
+        .progress-bar {
+          .progress {
+            margin-bottom: 0;
+            width: 100%;
+          }
+          ul {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+            li {
+              margin: 0 auto;
+              display: inline-block;
+              i.fa {
+                color: #42a5f5;
+                font-size: 24px;
+              }
+              i.fa-spin {
+                color: #b0bec5;
+                font-size: 24px;
+              }
+            }
+          }
+        }
+        .button-container {
+          text-align: right;
+        }
+      }
+    }
+    .steps-form {
+      .img-preview-container {
+        width: 60%;
+        height: 350px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 25px;
+        &:before {
+          content: "Image Preview";
+          color: white;
+          font-size: 32px;
+          text-shadow: 0px 0px 5px rgba(0, 0, 0, .8);
+        }
+      }
+      margin-top: 50px;
+      textarea {
+        padding-bottom: 0;
+        &:focus {
+          border-bottom-color: $light-blue;
+          box-shadow: 0 1px 0 0 $light-blue;
+          label{
+            &:active {
+              color: $light-blue;
+            }
+            &:focus {
+              color: $light-blue;
+            }
+          }
+        }
+      }
+      label {
+        color: $light-blue;
+        &:active {
+          color: $light-blue;
+        }
+        &:focus {
+          color: $light-blue;
+        }
+      }
+    }
+    h1 {
+      margin: 0;
+      font-size: 48px;
+    }
+  }
+}

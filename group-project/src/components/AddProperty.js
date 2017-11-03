@@ -7,7 +7,7 @@ class AddProperty extends Component {
     return (
       <div className="AddProperty">
         <Link to="/addlisting/1">
-          <button className="login btn waves-effect waves-light" type="submit" name="action">Add New Property</button>
+          <button className="login btn waves-effect waves-light" type="submit" name="action"><i class="material-icons right">add</i>Add New Property</button>
         </Link>      
       </div>
     );

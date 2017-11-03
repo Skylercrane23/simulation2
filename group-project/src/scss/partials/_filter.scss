@@ -13,20 +13,6 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      input {
-        &:focus {
-          border-bottom: $light-blue;
-          box-shadow: 0 1px 0 0 $light-blue;
-        }
-      }
-      label {
-        &:active {
-          color: $light-blue;
-        }
-        &:focus {
-          color: $light-blue;
-        }
-      }
     }
   }
   h2 {
@@ -39,10 +25,16 @@
     margin-right: 20px;
     background-color: $light-blue;
     &.filter {
-      background-color: darken($light-blue, 20%);
+      background-color: lighten($light-blue, 10%);
+      &:hover {
+        background-color: darken($light-blue, 5%);
+      }
     }
     &.reset {
-      background-color: lighten($blue-grey, 20%);
+      background-color: lighten($blue-grey, 10%);
+      &:hover {
+        background-color: darken($blue-grey, 5%);
+      }
     }
   }
 }

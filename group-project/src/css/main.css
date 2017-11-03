@@ -463,6 +463,49 @@ h4 {
 h5 {
   font-size: 20px; }
 
+/* label color */
+.input-field label {
+  color: #29b6f6; }
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #29b6f6 !important; }
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #29b6f6 !important;
+  box-shadow: 0 1px 0 0 #29b6f6 !important; }
+
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000; }
+
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000; }
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #000; }
+
+input:focus {
+  border-bottom-color: #29b6f6;
+  box-shadow: 0 1px 0 0 #29b6f6; }
+
+textarea:focus {
+  border-bottom-color: #29b6f6;
+  box-shadow: 0 1px 0 0 #29b6f6; }
+
+label {
+  font-size: 20px !important;
+  color: #29b6f6 !important; }
+  label:active {
+    color: #29b6f6 !important; }
+  label:focus {
+    color: #29b6f6 !important; }
+
 .Auth {
   background-image: url("../img/loginbackground.jpg");
   background-repeat: no-repeat;
@@ -517,7 +560,7 @@ h5 {
           background-color: #b7c6cd; }
 
 .Nav {
-  background-color: #37474f;
+  background-color: #455a64;
   width: 100%;
   z-index: 10000;
   position: fixed;
@@ -528,20 +571,24 @@ h5 {
   justify-content: space-between;
   align-items: center;
   font-family: "Dosis", sans-serif;
-  font-size: 18px; }
+  font-size: 20px; }
   @media (max-width: 767px) {
     .Nav {
       padding: 0 25px; } }
-  .Nav .logo span {
-    font-family: "Dosis", sans-serif;
-    font-size: 32px;
-    margin-left: 10px; }
-  .Nav .logo:hover {
-    color: #29b6f6; }
-  .Nav .logout i {
-    margin-left: 10px; }
-  .Nav .logout:hover {
-    color: #29b6f6; }
+  .Nav .logo {
+    color: white; }
+    .Nav .logo span {
+      font-family: "Dosis", sans-serif;
+      font-size: 32px;
+      margin-left: 10px; }
+    .Nav .logo:hover {
+      color: #29b6f6; }
+  .Nav .logout {
+    color: white; }
+    .Nav .logout i {
+      margin-left: 10px; }
+    .Nav .logout:hover {
+      color: #29b6f6; }
 
 .Dashboard {
   background-image: url("../img/dashboard.jpg");
@@ -586,13 +633,6 @@ h5 {
     flex-direction: row;
     justify-content: center;
     align-items: center; }
-    .Filter .right .flex-items input:focus {
-      border-bottom: #29b6f6;
-      box-shadow: 0 1px 0 0 #29b6f6; }
-    .Filter .right .flex-items label:active {
-      color: #29b6f6; }
-    .Filter .right .flex-items label:focus {
-      color: #29b6f6; }
   .Filter h2 {
     margin-bottom: 20px; }
   .Filter p {
@@ -601,14 +641,18 @@ h5 {
     margin-right: 20px;
     background-color: #29b6f6; }
     .Filter button.filter {
-      background-color: #077cb2; }
+      background-color: #5ac7f8; }
+      .Filter button.filter:hover {
+        background-color: #11aef5; }
     .Filter button.reset {
-      background-color: #99aeb8; }
+      background-color: #7b96a3; }
+      .Filter button.reset:hover {
+        background-color: #566f7c; }
 
 .Listings h2 {
   margin-bottom: 20px !important; }
 .Listings .Property:nth-child(odd) .card {
-  background-color: #41545e; }
+  background-color: #4b626d; }
 
 .Property .row {
   margin: 0; }
@@ -664,5 +708,86 @@ h5 {
         .Property .card .property-info .right ul li span.bold {
           font-weight: 700;
           margin-right: 5px; }
+
+.steps {
+  background-image: url("../img/step1.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-color: white;
+  color: black; }
+  .steps .container {
+    background-color: white;
+    height: 100%;
+    margin-top: 0px;
+    padding: 25px;
+    overflow: auto;
+    padding-top: 100px; }
+    .steps .container .step-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #607d8b;
+      padding-bottom: 20px; }
+      .steps .container .step-heading .top-step {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center; }
+        .steps .container .step-heading .top-step .progress-bar .progress {
+          margin-bottom: 0;
+          width: 100%; }
+        .steps .container .step-heading .top-step .progress-bar ul {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; }
+          .steps .container .step-heading .top-step .progress-bar ul li {
+            margin: 0 auto;
+            display: inline-block; }
+            .steps .container .step-heading .top-step .progress-bar ul li i.fa {
+              color: #42a5f5;
+              font-size: 24px; }
+            .steps .container .step-heading .top-step .progress-bar ul li i.fa-spin {
+              color: #b0bec5;
+              font-size: 24px; }
+        .steps .container .step-heading .top-step .button-container {
+          text-align: right; }
+    .steps .container .steps-form {
+      margin-top: 50px; }
+      .steps .container .steps-form .img-preview-container {
+        width: 60%;
+        height: 350px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 25px; }
+        .steps .container .steps-form .img-preview-container:before {
+          content: "Image Preview";
+          color: white;
+          font-size: 32px;
+          text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8); }
+      .steps .container .steps-form textarea {
+        padding-bottom: 0; }
+        .steps .container .steps-form textarea:focus {
+          border-bottom-color: #29b6f6;
+          box-shadow: 0 1px 0 0 #29b6f6; }
+          .steps .container .steps-form textarea:focus label:active {
+            color: #29b6f6; }
+          .steps .container .steps-form textarea:focus label:focus {
+            color: #29b6f6; }
+      .steps .container .steps-form label {
+        color: #29b6f6; }
+        .steps .container .steps-form label:active {
+          color: #29b6f6; }
+        .steps .container .steps-form label:focus {
+          color: #29b6f6; }
+    .steps .container h1 {
+      margin: 0;
+      font-size: 48px; }
 
 /*# sourceMappingURL=main.css.map */

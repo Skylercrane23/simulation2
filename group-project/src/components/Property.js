@@ -9,8 +9,8 @@ class Property extends Component {
           <div className="col s12 m12">
 
             <div className="card z-depth-3">
-              <a href=""><i className="delete-icon fa fa-times"></i></a>
-              <div className="image" 
+              <a href=""><i className="delete-icon material-icons right">close</i></a>
+              <div className="image " 
                 style = {{ 
                   backgroundImage: 'url(http://thomasmoorehomes.com/wp-content/uploads/2017/07/home-interiors-2-plush-design-patina-home-interiors-home.jpg)' 
                 }}> 
