@@ -587,7 +587,7 @@ h5 {
     justify-content: center;
     align-items: center; }
     .Filter .right .flex-items input:focus {
-      border-bottom: #29b6f6;
+      border-bottom-color: #29b6f6;
       box-shadow: 0 1px 0 0 #29b6f6; }
     .Filter .right .flex-items label:active {
       color: #29b6f6; }
