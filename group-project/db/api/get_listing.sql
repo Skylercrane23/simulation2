@@ -1,1 +1,0 @@
-SELECT * FROM properties WHERE propertyId = $1;
