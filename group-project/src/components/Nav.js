@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 class Nav extends Component {
   render() {
     return (
-      <div className="Nav">
+      <div className="Nav z-depth-3">
         <Link to="/">
           <div className="fa fa-home logo" style={{ fontSize: '44px' }}><span>Houser</span></div>
         </Link>

@@ -26,3 +26,55 @@ h4 {
 h5 {
   font-size: 20px;
 }
+
+// FORM STYLES
+/* label color */
+.input-field label {
+  color: $light-blue;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: $light-blue !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid $light-blue !important;
+  box-shadow: 0 1px 0 0 $light-blue !important;
+}
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #000;
+}
+
+input {
+  &:focus {
+    border-bottom-color: $light-blue;
+    box-shadow: 0 1px 0 0 $light-blue;
+  }
+}
+textarea {
+  &:focus {
+    border-bottom-color: $light-blue;
+    box-shadow: 0 1px 0 0 $light-blue;
+  }
+}
+label {
+  font-size: 20px !important;
+  color: $light-blue !important;
+  &:active {
+    color: $light-blue !important;
+  }
+  &:focus {
+    color: $light-blue !important;
+  }
+}

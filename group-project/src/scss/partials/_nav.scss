@@ -1,5 +1,5 @@
 .Nav {
-  background-color: #37474f;
+  background-color: #455a64;
   width: 100%;
   z-index: 10000;
   position: fixed;
@@ -10,11 +10,12 @@
   justify-content: space-between;
   align-items: center;
   font-family: $font-dosis;
-  font-size: 18px;
+  font-size: 20px;
   @media(max-width: 767px){
     padding: 0 25px;
   }
   .logo {
+    color: white;
     span {
       font-family: $font-dosis;
       font-size: 32px;
@@ -25,11 +26,12 @@
     }
   }
   .logout {
+    color: white;
     i {
       margin-left: 10px;
     }
     &:hover {
-      color: $light-blue;
+      color: $light-blue ;
     }
   }
 }

@@ -14,10 +14,10 @@ class Auth extends Component {
         <div className="container">
           <div className="card small">
             <form>
-              <h2> Please Login </h2>
+              <h2> Please Login or Register</h2>
 
               <div className="input-field col s12">
-                <i className="material-icons prefix">account_circle</i>
+                <i className="material-icons prefix">person</i>
                 <input id="first_name" type="text" className="validate" />
                 <label htmlFor="first_name">Username</label>
               </div>
