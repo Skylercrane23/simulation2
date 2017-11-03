@@ -7,7 +7,7 @@ class AddStep1 extends Component {
   render() {
     return (
       <div className="AddStep1">
-        <Nav />
+        {/* <Nav /> */}
           AddStep1 Component
       </div>
     );

@@ -519,6 +519,7 @@ h5 {
 .Nav {
   background-color: #37474f;
   width: 100%;
+  z-index: 10000;
   position: fixed;
   color: white;
   height: 70px;
@@ -578,12 +579,20 @@ h5 {
 
 .Filter {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin: 50px 0 30px 0; }
   .Filter .right .flex-items {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center; }
+    .Filter .right .flex-items input:focus {
+      border-bottom: #29b6f6;
+      box-shadow: 0 1px 0 0 #29b6f6; }
+    .Filter .right .flex-items label:active {
+      color: #29b6f6; }
+    .Filter .right .flex-items label:focus {
+      color: #29b6f6; }
   .Filter h2 {
     margin-bottom: 20px; }
   .Filter p {
@@ -595,5 +604,65 @@ h5 {
       background-color: #077cb2; }
     .Filter button.reset {
       background-color: #99aeb8; }
+
+.Listings h2 {
+  margin-bottom: 20px !important; }
+.Listings .Property:nth-child(odd) .card {
+  background-color: #41545e; }
+
+.Property .row {
+  margin: 0; }
+.Property .card {
+  background-color: #607d8b;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 200px; }
+  .Property .card .delete-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 15px 10px 15px;
+    font-size: 24px;
+    color: white; }
+  .Property .card .image {
+    width: 25%;
+    height: 200px;
+    background-size: cover; }
+  .Property .card .row {
+    margin-bottom: 0;
+    margin: 0; }
+  .Property .card .property-info {
+    padding: 0;
+    min-height: 200px;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .Property .card .property-info .left {
+      margin-left: 25px;
+      margin-top: 25px;
+      color: white;
+      align-self: flex-start; }
+      .Property .card .property-info .left h2.prop-name {
+        margin-bottom: 10px !important; }
+      .Property .card .property-info .left p {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.2;
+        font-size: 16px;
+        overflow: scroll;
+        max-height: 105px; }
+    .Property .card .property-info .right {
+      align-items: center;
+      align-self: center;
+      color: white;
+      max-height: 185px;
+      overflow: scroll; }
+      .Property .card .property-info .right ul li {
+        font-size: 17px;
+        padding: 3px 0; }
+        .Property .card .property-info .right ul li span.bold {
+          font-weight: 700;
+          margin-right: 5px; }
 
 /*# sourceMappingURL=main.css.map */

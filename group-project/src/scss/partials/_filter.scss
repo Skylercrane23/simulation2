@@ -1,6 +1,7 @@
 .Filter {
   display: flex;
   justify-content: space-between;
+  margin: 50px 0 30px 0;
   .left {
     
   }
@@ -12,6 +13,20 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      input {
+        &:focus {
+          border-bottom: $light-blue;
+          box-shadow: 0 1px 0 0 $light-blue;
+        }
+      }
+      label {
+        &:active {
+          color: $light-blue;
+        }
+        &:focus {
+          color: $light-blue;
+        }
+      }
     }
   }
   h2 {
@@ -30,5 +45,4 @@
       background-color: lighten($blue-grey, 20%);
     }
   }
-
 }
