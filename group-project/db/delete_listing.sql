@@ -1,1 +1,1 @@
-DELETE FROM property WHERE prop_id = $1;
+DELETE FROM properties WHERE prop_id = $1;
