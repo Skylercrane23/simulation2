@@ -1,0 +1,34 @@
+.Filter {
+  display: flex;
+  justify-content: space-between;
+  .left {
+    
+  }
+  .right {
+    //display: flex;
+    //flex-direction: row;
+    .flex-items {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  button {
+    margin-right: 20px;
+    background-color: $light-blue;
+    &.filter {
+      background-color: darken($light-blue, 20%);
+    }
+    &.reset {
+      background-color: lighten($blue-grey, 20%);
+    }
+  }
+
+}

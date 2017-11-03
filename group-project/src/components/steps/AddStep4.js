@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // COMPONENTS
-import Nav from './steps/Nav';
+import Nav from '../Nav';
 
 class AddStep4 extends Component {
   render() {

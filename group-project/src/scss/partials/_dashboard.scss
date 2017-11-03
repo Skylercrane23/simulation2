@@ -1,0 +1,32 @@
+.Dashboard {
+  background-image: url('../img/dashboard.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+  .container {
+    background-color: rgba(255, 255, 255, 1); 
+    height: 100%;
+    margin-top: 0px;
+    padding: 25px;
+    min-height: 500px;
+    overflow: auto;
+    padding-top: 100px;
+    .dashboard-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $blue-grey;
+      padding-bottom: 20px;
+      .right-align {
+        align-self: center;
+      }
+    }
+    h1 {
+      margin: 0;
+      font-size: 48px;
+    }
+  }
+}
