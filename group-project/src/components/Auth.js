@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-// LINKING ROUTES
-import { Link } from 'react-router-dom';
-
 import Nav from './Nav';
 
 class Auth extends Component {
@@ -47,6 +44,7 @@ class Auth extends Component {
                 </div>
               
                   <button 
+                      onClick={ () => this.login() }
                       className="login btn waves-effect waves-light" 
                       type="submit" 
                       name="action"
@@ -87,6 +85,13 @@ class Auth extends Component {
   }
 
   // LOGIN
+  login() {
+    axios.post('//localhost:3001/auth/login', { username: this.state.username, password: this.state.password } )
+    .then(res => {
+      window.localStorage.setItem("loggedInUser", res.data.user.user_name);
+      this.props.history.push('/dashboard');
+    })
+  }
 
 }
 
