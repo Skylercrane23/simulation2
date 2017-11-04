@@ -13,7 +13,7 @@ class Filter extends Component {
           <form className="">
             <div className="row flex-items">
               <div className="input-field col s4">
-                <input placeholder="$" id="first_name" type="text" className="validate"/>
+                <input id="first_name" type="text" className="validate"/>
                 <label for="first_name">$ Desired Rent</label>
               </div>
               <button className="filter btn waves-effect waves-light" type="submit" name="action"><i class="material-icons right">filter_list</i>Filter</button>
