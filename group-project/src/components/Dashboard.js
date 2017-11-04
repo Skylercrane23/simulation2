@@ -23,7 +23,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="Dashboard">
-        <Nav />
+        <Nav history={this.props.history}/>
         <div className="container z-depth-5">
           <div className="row dashboard-heading">
             <div className="col s6 align-left">
