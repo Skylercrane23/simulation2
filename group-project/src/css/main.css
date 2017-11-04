@@ -584,6 +584,9 @@ label {
     .Nav .logo:hover {
       color: #29b6f6; }
   .Nav .logout {
+    margin-top: 5px;
+    text-align: right;
+    cursor: pointer;
     color: white; }
     .Nav .logout i {
       margin-left: 10px; }

@@ -42,7 +42,6 @@ AuthRouter.post('/register', (req, res) => {
               .send({ message: 'Error with the database' })
       });
       
-
   });
 
 AuthRouter.post('/login', passport.authenticate('local'), (req, res) => {
@@ -56,7 +55,6 @@ AuthRouter.post('/login', passport.authenticate('local'), (req, res) => {
 
 AuthRouter.get('/logout', (req, res)=> {
     req.logOut();
-
     res.sendStatus(200);
 })
 
