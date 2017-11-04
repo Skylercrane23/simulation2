@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 
-// ROUTER
-import router from './router';
-
-// COMPONENT IMPORTS
-import Nav from './components/Nav';
 import Auth from './components/Auth';
+import Dashboard from './components/Dashboard';
+import AddPropertyForm from './components/AddPropertyForm';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        { router }
+        <Route component={ Auth } exact path='/' />
+        <Route component={ Dashboard } path="/dashboard" />
+        <Route component={ AddPropertyForm } path="/add-listing"  />
       </div>
     );
   }

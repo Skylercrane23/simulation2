@@ -21,10 +21,10 @@ class AddStep4 extends Component {
              
               <div className="progress-bar col s6">
                 <ul>
-                  <li><i class="fa fa-check" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i></li>
-                  <li><i class="fa-spin fa fa-circle-o-notch" aria-hidden="true"></i></li>
+                  <li><i className="fa fa-check" aria-hidden="true"></i></li>
+                  <li><i className="fa fa-check" aria-hidden="true"></i></li>
+                  <li><i className="fa fa-check" aria-hidden="true"></i></li>
+                  <li><i className="fa-spin fa fa-circle-o-notch" aria-hidden="true"></i></li>
                   <li></li>
                 </ul>
                 <div className="progress">
@@ -34,7 +34,7 @@ class AddStep4 extends Component {
 
               <div className="button-container col s3">
                 <Link to="/dashboard">
-                 <button className="login  red lighten-1 btn waves-effect waves-light" type="submit" name="action"><i class="material-icons right">clear</i>Cancel</button>
+                 <button className="login  red lighten-1 btn waves-effect waves-light" type="submit" name="action"><i className="material-icons right">clear</i>Cancel</button>
                 </Link>             
               </div>
              
@@ -46,22 +46,22 @@ class AddStep4 extends Component {
               <div className="row">
                 <div className="input-field col s12">
                   <input id="address" type="text" className="validate"/>
-                  <label for="address">Enter the loan amount:</label>
+                  <label htmlFor="address">Enter the loan amount:</label>
                 </div>
                 <div className="input-field col s12">
                   <textarea id="textarea1" className="materialize-textarea"></textarea>
-                  <label for="textarea1">Enter the monthly mortgage:</label>
+                  <label htmlFor="textarea1">Enter the monthly mortgage:</label>
                 </div>
                 
 
                   <div className="input-field col s6 left-align">
                     <Link to="/addlisting/3">
-                      <button className="login blue lighten-1 btn waves-effect waves-light" type="submit" name="action">Previous<i class="material-icons  left">arrow_back</i></button>
+                      <button className="login blue lighten-1 btn waves-effect waves-light" type="submit" name="action">Previous<i className="material-icons  left">arrow_back</i></button>
                     </Link>
                   </div>
                   <div className="input-field col s6 right-align">
                     <Link to="/addlisting/5">
-                      <button className="login blue lighten-1 btn waves-effect waves-light" type="submit" name="action">Next Step <i class="material-icons right">arrow_forward</i></button>
+                      <button className="login blue lighten-1 btn waves-effect waves-light" type="submit" name="action">Next Step <i className="material-icons right">arrow_forward</i></button>
                     </Link>
                   </div>
                 

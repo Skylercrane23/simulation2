@@ -6,6 +6,15 @@ import { Link } from 'react-router-dom';
 import Nav from '../Nav';
 
 class AddStep3 extends Component {
+
+  constructor(props) {
+    super(props) 
+
+    this.state = {
+      imgURL: props.property.imgURL || ''
+    }
+  }
+
   render() {
     return (
       <div className="AddStep3 steps">
@@ -21,9 +30,9 @@ class AddStep3 extends Component {
              
               <div className="progress-bar col s6">
                 <ul>
-                  <li><i class="fa fa-check" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i></li>
-                  <li><i class="fa-spin fa fa-circle-o-notch" aria-hidden="true"></i></li>
+                  <li><i className="fa fa-check" aria-hidden="true"></i></li>
+                  <li><i className="fa fa-check" aria-hidden="true"></i></li>
+                  <li><i className="fa-spin fa fa-circle-o-notch" aria-hidden="true"></i></li>
                   <li></li>
                   <li></li>
                 </ul>
@@ -34,7 +43,7 @@ class AddStep3 extends Component {
 
               <div className="button-container col s3">
                 <Link to="/dashboard">
-                 <button className="login  red lighten-1 btn waves-effect waves-light" type="submit" name="action"><i class="material-icons right">clear</i>Cancel</button>
+                 <button className="login  red lighten-1 btn waves-effect waves-light" type="submit" name="action"><i className="material-icons right">clear</i>Cancel</button>
                 </Link>             
               </div>
              
@@ -42,7 +51,7 @@ class AddStep3 extends Component {
             </div>
           </div>
 
-          <form className="steps-form">
+          <form className="steps-form" onSubmit={ (e) => e.preventDefault() }>
               <div className="row">
                 <div className="img-preview-container grey lighten-3"
                   alt="Preview Image"
@@ -51,22 +60,22 @@ class AddStep3 extends Component {
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat'
                 }}>
-                  {/* <img class="materialboxed responsive-img" src="" alt="Image Preview"/> */}
+                  {/* <img className="materialboxed responsive-img" src="" alt="Image Preview"/> */}
                 </div>
                 <div className="input-field col s12">
-                  <input id="imageUrl" type="text" className="validate"/>
-                  <label for="imageUrl">Enter the image url:</label>
+                  <input id="property-imageUrl" onChange={(e) => this.handleChange('address', e)} value={this.state.address} type="text" className="validate"/>
+                  <label htmlFor="imageUrl">Enter the image url:</label>
                 </div>
                
 
                   <div className="input-field col s6 left-align">
                     <Link to="/addlisting/2">
-                      <button className="login blue lighten-1 btn waves-effect waves-light" type="submit" name="action">Previous<i class="material-icons  left">arrow_back</i></button>
+                      <button className="login blue lighten-1 btn waves-effect waves-light" type="submit" name="action">Previous<i className="material-icons  left">arrow_back</i></button>
                     </Link>
                   </div>
                   <div className="input-field col s6 right-align">
                     <Link to="/addlisting/4">
-                      <button className="login blue lighten-1 btn waves-effect waves-light" type="submit" name="action">Next Step <i class="material-icons right">arrow_forward</i></button>
+                      <button onClick={() => this.onSubmit()} className="login blue lighten-1 btn waves-effect waves-light" type="submit" name="action">Next Step <i className="material-icons right">arrow_forward</i></button>
                     </Link>
                   </div>
                 
@@ -76,6 +85,18 @@ class AddStep3 extends Component {
         </div>
       </div>
     );
+  }
+
+  handleChange(fieldName, e) {
+    this.setState({
+      [fieldName]: e.target.value
+    })
+  }
+
+  onSubmit() {
+    const {address, city, state, zip} = this.state;
+
+    this.props.onNext({address, city, state, zip})
   }
 }
 
