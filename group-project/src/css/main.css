@@ -583,6 +583,8 @@ label {
       margin-left: 10px; }
     .Nav .logo:hover {
       color: #29b6f6; }
+  .Nav span.blue-name {
+    color: #29b6f6; }
   .Nav .logout {
     margin-top: 5px;
     text-align: right;

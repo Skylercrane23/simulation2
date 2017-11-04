@@ -15,7 +15,7 @@ class Nav extends Component {
 
         { window.localStorage.loggedInUser !== "none" && 
         <div>
-            <span>Welcome {window.localStorage.loggedInUser}</span>
+            Welcome <span className="blue-name"> {window.localStorage.loggedInUser}</span>
             <div  
                 onClick={ () => this.logout() } 
                 className="logout">
